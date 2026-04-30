@@ -3,6 +3,7 @@ package cz.catparadise.controller;
 import cz.catparadise.model.Room;
 import cz.catparadise.model.RoomType;
 import cz.catparadise.service.RoomService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
+@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("/api/rooms")
 public class RoomController {
